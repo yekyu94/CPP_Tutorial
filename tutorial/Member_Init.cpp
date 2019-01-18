@@ -7,12 +7,13 @@ class user{
     char name[20];
     
 public:
-    user():ID(0), PW(0){
+    user(){
+        ID = 0;
+        PW = 0;
         strcpy(name, "홍길동");
     }
-    user(int A, int B, char *C){
-        ID = A;
-        PW = B;
+    // 초기화의 다른 방법
+    user(int A, int B, char *C):ID(A), PW(B){
         strcpy(name, C);
     }
     
